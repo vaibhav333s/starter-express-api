@@ -97,11 +97,11 @@ xhttp.overrideMimeType("application/json; charset=x-user-defined");
 xhttp.send(); }
 
 }
-(function readDat(){HTTP.get("/atcop/param",(a)=>{let d=JSON.parse(a.responseText);
+function readDat(){HTTP.get("/atcop/param",(a)=>{let d=JSON.parse(a.responseText);
 angVal.innerHTML=d.angle;
 torVal.innerHTML=d.torque;
-}); })();
+}); };
 
-setInterval(readDat,1000);
+readDat();setInterval(readDat,1000);
 </script>
 </body>
